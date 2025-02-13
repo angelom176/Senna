@@ -1,0 +1,157 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: linear-gradient(to right, rgb(51, 51, 51), rgb(172, 172, 172), white);}
+
+section{
+            margin: 0;
+            height: 100vh;
+            background-image: url(/img/Prancheta\ 1.png);
+        }
+
+
+
+/* Header estilo base */
+header {
+    color: white;
+    width: 100%;
+    padding: 25px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    z-index: 1000;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+   
+
+}
+
+h1{font-style: italic;
+font-size: 250px;
+color: rgb(255, 255, 255);
+margin-left: 180px;
+padding-top: 200px;
+font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;}
+
+/* Oculta o checkbox */
+#menu-toggle {
+    display: none;
+}
+
+/* Estiliza o ícone do menu hambúrguer */
+.menu-icon {
+    font-size: 30px;
+    display: none; /* Só aparece em telas pequenas */
+}
+
+/* Estiliza o menu */
+.menu ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-size: 15px;
+
+}
+
+/* ============ TELAS GRANDES (H1 e menu lado a lado) ============ */
+@media (min-width: 1240px) {
+    header {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .menu {
+        display: block;
+    }
+
+    .menu ul {
+        flex-direction: row;
+    }
+}
+
+/* ============ TELAS MÉDIAS (H1 em cima e lista abaixo) ============ */
+@media (max-width: 1239px) and (min-width: 750px) {
+    header {
+        flex-direction: column;
+        align-items: start;
+        text-align: start;
+        padding: 40px;
+    }
+
+    header h1{
+        padding-bottom: 20px;
+        font-size: 80px;
+    }
+
+    .menu {
+        display: block;
+    }
+
+    .menu ul {
+        flex-direction: column; /* Lista abaixo do título */
+        align-items: start;
+        padding-top: 10px;
+    }
+}
+
+/* ============ TELAS PEQUENAS (Menu hambúrguer) ============ */
+@media (max-width: 749px) {
+    header {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 15px;
+    }
+
+    .menu {
+        display: none; /* Esconde o menu por padrão */
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.9);
+        padding: 10px 0;
+    }
+
+    .menu ul {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+
+    .menu a {
+        display: block;
+        padding: 10px;
+    }
+
+    .menu-icon {
+        display: block; /* Mostra o ícone hambúrguer */
+    }
+
+    /* Quando o checkbox for marcado, mostra o menu */
+    #menu-toggle:checked ~ .menu {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+section{
+    position: relative;
+}
+
+img{
+width: auto;
+height: 90vh;
+left: 50%;
+top: 75px;
+position: absolute;
+}
