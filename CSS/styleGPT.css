@@ -1,0 +1,171 @@
+/* ----------- TIMELINE STYLING (EARLY LIFE TO LEGACY) ----------- */
+
+article {
+    font-family: 'Vipnagorgialla Bd', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    line-height: 1.8;
+    transition: all 0.6s ease-in-out;
+    position: relative;
+    overflow: hidden;
+}
+
+article h2 {
+    font-size: 50px;
+    padding-bottom: 20px;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.4);
+    transform: scaleY(1.2);
+}
+
+article p {
+    font-size: 18px;
+    transform: scaleY(1.1);
+}
+
+/* Fade-in effect on scroll */
+article {
+    opacity: 0;
+    transform: translateY(50px);
+    animation: fadeInUp 1s ease forwards;
+}
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* EARLY LIFE */
+.earlyLife {
+    background: linear-gradient(
+        to right,
+        rgba(0, 0, 0, 0.8),
+        rgba(139, 0, 0, 0.85),
+        rgba(255, 0, 0, 0.7)
+    ),
+    url('/img/kidSenna.jpg') right center no-repeat;
+    background-size: cover;
+    color: #fff;
+    padding: 8rem 10rem;
+    border-left: 8px solid #ffcc00;
+}
+
+.earlyLife h2 {
+    color: #ffcc00;
+}
+.earlyLife p {
+    margin-right: 35%;
+}
+
+/* FORMULA DEBUT */
+.formulaDebut {
+    background: linear-gradient(135deg, #c31432, #240b36);
+    color: white;
+    padding: 8rem 10rem;
+    border-left: 8px solid #00aaff;
+}
+.formulaDebut h2 {
+    color: #00aaff;
+}
+
+/* RISING STAR */
+.risingStar {
+    background: linear-gradient(135deg, #000000, #434343);
+    color: white;
+    padding: 8rem 10rem;
+    border-left: 8px solid #00ff99;
+}
+.risingStar h2 {
+    color: #00ff99;
+}
+
+/* MCLAREN ERA */
+.mclarenEra {
+    background: linear-gradient(135deg, #b31217, #e52d27);
+    color: #fff;
+    padding: 8rem 10rem;
+    border-left: 8px solid #ffffff;
+}
+.mclarenEra h2 {
+    color: #ffffff;
+}
+
+/* BEYOND RACING */
+.beyondRacing {
+    background: linear-gradient(135deg, #141e30, #243b55);
+    color: #fff;
+    padding: 8rem 10rem;
+    border-left: 8px solid #ffd700;
+}
+.beyondRacing h2 {
+    color: #ffd700;
+}
+
+/* LEGACY */
+.legacy {
+    background: linear-gradient(135deg, #f0f0f0, #aaaaaa);
+    color: #000;
+    padding: 8rem 10rem;
+    border-left: 8px solid #000;
+}
+.legacy h2 {
+    color: #000;
+}
+.legacy p {
+    margin-right: 25%;
+}
+
+/* FOOTER */
+.references {
+    background: rgba(0, 0, 0, 0.9);
+    padding: 60px 20px;
+    margin-top: 80px;
+    text-align: center;
+    border-top: 4px solid #ffcc00;
+    box-shadow: 0px -4px 15px rgba(0, 0, 0, 0.5);
+}
+
+.references h2 {
+    font-size: 35px;
+    color: #ffcc00;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
+    margin-bottom: 20px;
+}
+
+.references ul {
+    list-style: none;
+    padding: 0;
+}
+
+.references li {
+    margin: 10px 0;
+}
+
+.references a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 16px;
+    opacity: 0.8;
+    transition: all 0.3s ease;
+}
+
+.references a:hover {
+    color: #ffcc00;
+    opacity: 1;
+    text-shadow: 0px 0px 8px rgba(255, 204, 0, 0.8);
+}
+
+/* ---------- Responsive Adjustments ---------- */
+@media (max-width: 900px) {
+    article {
+        padding: 5rem 2rem;
+        text-align: center;
+    }
+    .earlyLife p,
+    .legacy p {
+        margin-right: 0;
+    }
+    .references {
+        padding: 40px 10px;
+    }
+}
